@@ -1,4 +1,6 @@
 {
-  "upstream": "helm/chart-releaser-action",
-  "version": "v1.7.0"
+  "owner": "helm",
+  "repo": "chart-releaser-action",
+  "version": "",
+  "url": "https://github.com/helm/chart-releaser-action"
 }
