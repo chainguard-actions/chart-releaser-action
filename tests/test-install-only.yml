@@ -1,0 +1,25 @@
+name: Test install-only with custom install-dir
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_REPOSITORY: test-owner/test-repo
+      CR_TOKEN: fake-token-not-needed-for-install-only
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - id: action
+        uses: .
+        with:
+          install_only: "true"
+          install_dir: /tmp/cr-custom-install
+          version: v1.7.0
+      - name: Assert cr binary was installed in custom dir
+        run: |
+          echo "Checking if cr binary exists in custom install dir..."
+          if [ ! -f /tmp/cr-custom-install/cr ]; then
+            echo "FAIL: cr binary not found in /tmp/cr-custom-install"
+            exit 1
+          fi
+          echo "PASS: cr binary found in /tmp/cr-custom-install"
