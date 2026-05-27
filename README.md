@@ -8,7 +8,7 @@ Hardened by [Chainguard](https://www.chainguard.dev) from the upstream action at
 
 | Version | Tag | Upstream commit |
 |---------|-----|-----------------|
-| v1.7.0 | [`v1.7.0`](https://github.com/chainguard-actions/helm-chart-releaser-action/tree/v1.7.0) | — |
+| v1.7.0 | [`v1.7.0`](https://github.com/chainguard-actions/helm-chart-releaser-action/tree/v1.7.0) | [`cae68fe`](https://github.com/helm/chart-releaser-action/commit/cae68fefc6b5f367a0275617c9f83181ba54714f) |
 
 ## Privacy
 
